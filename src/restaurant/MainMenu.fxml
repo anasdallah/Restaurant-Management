@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="0.0" prefWidth="0.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restaurant.MainMenuController">
+   <children>
+      <Pane id="slideLeft" prefHeight="590.0" prefWidth="237.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="673.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="41.0" layoutY="118.0" onAction="#Meals" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="35.0" prefWidth="179.0" stylesheets="@style.css" text="_Meals">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label layoutX="41.0" layoutY="39.0" text="Control Panel" textFill="#f8f8f8">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="41.0" layoutY="181.0" onAction="#Drinks" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="35.0" prefWidth="179.0" stylesheets="@style.css" text="D_rinks">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button id="logout" layoutX="61.0" layoutY="522.0" onAction="#onLogout" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="54.0" prefWidth="140.0" text="_Logout" textFill="#090808">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="196.0" fitWidth="303.0" layoutX="33.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Meals_photo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox id="statistics" alignment="TOP_CENTER" layoutX="251.0" prefHeight="90.0" prefWidth="673.0" stylesheets="@style.css" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="statistics" textFill="WHITE">
+               <font>
+                  <Font name="Consolas Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="674.0" stylesheets="@style.css">
+               <children>
+                  <Label text="Meals: ">
+                     <font>
+                        <Font name="Consolas Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="numMeals" alignment="CENTER" disable="true" prefHeight="19.0" prefWidth="41.0">
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="14.0" text="|">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Drinks: ">
+                     <font>
+                        <Font name="Consolas Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="numDrinks" alignment="CENTER" disable="true" prefHeight="19.0" prefWidth="41.0">
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="3.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane id="Meals" fx:id="Meals" layoutX="250.0" layoutY="89.0" prefHeight="501.0" prefWidth="674.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
+         <children>
+            <Pane id="mmid" layoutX="1.0" opacity="0.75" prefHeight="139.0" prefWidth="201.0" stylesheets="@style.css">
+               <children>
+                  <Label fx:id="lblnameM" layoutX="2.0" layoutY="38.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="94.0" text="Meals _Name:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameM" layoutX="95.0" layoutY="40.0" prefHeight="25.0" prefWidth="103.0" />
+                  <Label fx:id="lblTypeM" layoutX="2.0" layoutY="69.0" mnemonicParsing="true" prefHeight="28.0" prefWidth="84.0" text="Meals _Type:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="costM" layoutX="95.0" layoutY="104.0" prefHeight="25.0" prefWidth="103.0" />
+                  <Label fx:id="lblcostM" layoutX="2.0" layoutY="104.0" mnemonicParsing="true" text="Meals _Price:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="typeM" layoutX="95.0" layoutY="71.0" prefHeight="25.0" prefWidth="111.0" promptText="choose..." />
+                  <Label layoutX="3.0" layoutY="10.0" text="Meals id:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="numM" editable="false" layoutX="95.0" layoutY="9.0" opacity="0.75" prefHeight="25.0" prefWidth="103.0" />
+               </children>
+            </Pane>
+            <TableView id="tableview" fx:id="tableM" layoutX="201.0" layoutY="3.0" prefHeight="500.0" prefWidth="468.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="numCM" prefWidth="75.0" text="Meals id" />
+                <TableColumn fx:id="nameCM" prefWidth="75.0" text="Meals Name" />
+                  <TableColumn fx:id="typeCM" prefWidth="75.0" text="Meals Type" />
+                  <TableColumn fx:id="costCM" prefWidth="75.0" text="Meals Price" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="101.0" layoutY="159.0" startX="99.99996948242188" startY="-158.0" />
+            <Line endX="356.5" endY="0.5000076293945312" layoutX="316.0" startX="-113.79995727539062" startY="0.5000076293945312" />
+            <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="572.0" layoutY="159.0" startX="99.99996948242188" startY="-158.0" />
+            <Button layoutX="1.0" layoutY="235.0" onAction="#addMeals" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Add Meals">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="285.0" onAction="#update" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Edit Meals">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="336.0" onAction="#deleteMeals" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Delete Meals" textFill="#ca0b0b">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="386.0" onAction="#ClearMeals" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Clear">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Line endX="352.49993896484375" endY="0.5000076293945312" layoutX="565.0" layoutY="588.0" startX="-113.79995727539062" startY="0.5000076293945312" />
+      <Pane id="Meals" fx:id="Drinks" layoutX="250.0" layoutY="89.0" prefHeight="501.0" prefWidth="674.0" stylesheets="@style.css">
+         <children>
+            <Pane id="mmid" layoutX="1.0" opacity="0.75" prefHeight="139.0" prefWidth="201.0" stylesheets="@style.css">
+               <children>
+                  <Label fx:id="lblnameD" layoutX="2.0" layoutY="38.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="94.0" text="Drinks _Name:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameD" layoutX="95.0" layoutY="40.0" prefHeight="25.0" prefWidth="103.0" />
+                  <Label fx:id="lblTypeD" layoutX="2.0" layoutY="69.0" mnemonicParsing="true" prefHeight="28.0" prefWidth="84.0" text="Drinks _Type:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="costD" layoutX="95.0" layoutY="104.0" prefHeight="25.0" prefWidth="103.0" />
+                  <Label fx:id="lblcostD" layoutX="2.0" layoutY="104.0" mnemonicParsing="true" text="Drinks _Price:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="typeD" layoutX="95.0" layoutY="71.0" prefHeight="25.0" prefWidth="111.0" promptText="choose..." />
+                  <Label layoutX="3.0" layoutY="10.0" text="Drinks id:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="numD" editable="false" layoutX="95.0" layoutY="9.0" prefHeight="25.0" prefWidth="103.0" />
+               </children>
+            </Pane>
+            <TableView id="tableview" fx:id="tableD" layoutX="201.0" layoutY="3.0" prefHeight="500.0" prefWidth="468.0" stylesheets="@style.css">
+               <columns>
+                  <TableColumn fx:id="numCD" prefWidth="75.0" text="Drinks id" />
+                  <TableColumn fx:id="nameCD" prefWidth="75.0" text="Drinks Name" />
+                  <TableColumn fx:id="typeCD" prefWidth="75.0" text="Drinks Type" />
+                  <TableColumn fx:id="costCD" prefWidth="75.0" text="Drinks Price" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="101.0" layoutY="159.0" startX="99.99996948242188" startY="-158.0" />
+            <Line endX="356.5" endY="0.5000076293945312" layoutX="316.0" startX="-113.79995727539062" startY="0.5000076293945312" />
+            <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="572.0" layoutY="159.0" startX="99.99996948242188" startY="-158.0" />
+            <Button layoutX="1.0" layoutY="235.0" onAction="#addDrinks" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Add Drinks">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="285.0" onAction="#update" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Edit Drinks">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="336.0" onAction="#deleteDrinks" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Delete Drinks" textFill="#ca0b0b">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="386.0" onAction="#ClearDrinks" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="_Clear">
+               <font>
+                  <Font name="Consolas Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Line endX="352.49993896484375" endY="0.5000076293945312" layoutX="566.0" layoutY="588.0" startX="-113.79995727539062" startY="0.5000076293945312" />
+   </children>
+</AnchorPane>

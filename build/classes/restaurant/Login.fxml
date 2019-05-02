@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="loginLayout" prefHeight="536.0" prefWidth="357.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restaurant.LoginController">
+   <children>
+      <ImageView fitHeight="204.0" fitWidth="188.0" layoutX="85.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../std.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="299.0" prefHeight="24.0" prefWidth="94.0" text="UserName:" textFill="#f0f0f0">
+         <font>
+            <Font name="Roboto" size="19.0" />
+         </font>
+      </Label>
+      <TextField id="txtuser" fx:id="username" layoutX="147.0" layoutY="298.0" prefHeight="26.0" prefWidth="188.0" stylesheets="@style.css" />
+      <Label layoutX="30.0" layoutY="356.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField id="txtpassword" fx:id="password" layoutX="145.0" layoutY="354.0" prefHeight="26.0" prefWidth="188.0" stylesheets="@style.css" />
+      <Button fx:id="loginbtn" defaultButton="true" layoutX="65.0" layoutY="451.0" mnemonicParsing="true" onAction="#login" prefHeight="35.0" prefWidth="86.0" text="_Login">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button cancelButton="true" layoutX="207.0" layoutY="451.0" mnemonicParsing="true" onAction="#exit" prefHeight="35.0" prefWidth="85.0" text="_Cancel">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

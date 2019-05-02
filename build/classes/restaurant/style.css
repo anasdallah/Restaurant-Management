@@ -1,0 +1,48 @@
+#loginLayout{
+    -fx-background-color:#333;
+}
+#txtuser{
+    -fx-background-color: #f3f6f4;
+    -fx-background-radius: 10px;
+
+}
+#statistics{
+    -fx-background-color:#968a8b;
+} 
+
+#hbox{
+    -fx-background-color: #9faba2;
+}
+#txtpassword{
+    -fx-background-color: #f3f6f4;
+    -fx-background-radius: 10px;
+}
+#slideLeft{
+    -fx-background-color:#333;
+}
+#logout{
+    -fx-background-color: #f3091c;
+    -fx-background-radius: 50px;
+
+}
+#Meals{
+
+    -fx-background-color:#3f444c;
+}
+#mmid{
+    -fx-background-color:#79717c;
+    -fx-background-radius: 10px;
+
+}
+#tableview{
+
+    -fx-background-color:#686f88;
+}
+#editpane{
+
+    -fx-background-color:#5f6274;
+}
+#AnchorPane,#gridpane{
+    -fx-background-color:#5fa591;
+
+}
